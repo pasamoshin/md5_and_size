@@ -1,5 +1,16 @@
 import hashlib
 import os.path
+import sys
+
+
+def get_path():
+    path = sys.argv
+    if len(path) <= 1:
+        path = input('Введите путь: ').replace('"', '')
+    else: 
+        path = path[1]
+    return path
+
 
 
 def get_md5(path=str):
@@ -23,7 +34,8 @@ def creat_res_file(path, md5, size):
 
 
 if __name__ == '__main__':
-    path = input('Введите путь: ').replace('"', '')
+    path = get_path()
     md5 = get_md5(path)
     size = get_size(path)
     creat_res_file(path, md5, size)
+
