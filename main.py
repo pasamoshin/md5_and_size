@@ -12,7 +12,6 @@ def get_path():
     return path
 
 
-
 def get_md5(path=str):
     with open(path, 'rb') as file:
         data = file.read()
@@ -38,4 +37,5 @@ if __name__ == '__main__':
     md5 = get_md5(path)
     size = get_size(path)
     creat_res_file(path, md5, size)
+    sys.exit()
 
