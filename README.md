@@ -4,3 +4,5 @@
  `pyinstaller main.py -F -n MD5 --icon=md5.ico`
 
 [Руководство](/md5_exe/README.md) по установке программы.
+
+[Скачать](md5.rar) архив с файлом
